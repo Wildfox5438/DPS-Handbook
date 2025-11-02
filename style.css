@@ -1,0 +1,324 @@
+/* ==================================
+   TEXAS DPS RP STYLESHEET
+   ==================================
+*/
+
+/* Basic Setup */
+:root {
+    --dps-blue: #0A2240; /* Deeper, modern navy */
+    --dps-gold-accent: #C9A44E; /* Muted gold for accents */
+    --dark-grey: #2C2C2C;
+    --light-grey: #f8f9fa; /* Cleaner background */
+    --white: #ffffff;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    background-color: var(--light-grey);
+    color: var(--dark-grey);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: rgba(10, 34, 64, 0.95); /* Slightly more opaque */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--white);
+    padding: 0.75rem 0; /* A bit slimmer */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.25rem; /* Adjusted size */
+    font-weight: 700;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .nav-links li {
+    margin-left: 10px; /* Tighter spacing */
+}
+
+.navbar .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem; /* Smaller font for more links */
+    transition: color 0.3s ease;
+    padding: 0.5rem 0.75rem; /* Pad links */
+    border-radius: 6px;
+}
+
+.navbar .nav-links a:hover {
+    color: var(--dps-gold-accent);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1605059695960-a5f118153e7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&lib=rb-1.2.1&q=80&w=1600');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 50vh; /* Shorter hero */
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 60px; /* Offset for fixed navbar */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+/* General Sections */
+section {
+    padding: 3rem 0; /* Tighter padding */
+}
+
+section h2 {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--dps-blue);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: -1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Base Card Style */
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Content Pages */
+.content-page {
+    padding-top: 80px; /* More padding for taller navbar */
+}
+
+.content-block {
+    padding: 2.5rem;
+}
+
+.content-block h3 {
+    color: var(--dps-blue);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--light-grey);
+    padding-bottom: 0.5rem;
+}
+
+.content-block ul {
+    margin-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.content-block li {
+    margin-bottom: 0.5rem;
+}
+
+/* Home Page Key List */
+.key-list {
+    list-style: none;
+    margin-left: 0;
+}
+.key-check {
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--white);
+}
+.key-check.blue { background-color: #007bff; }
+.key-check.red { background-color: #dc3545; }
+.key-check.green { background-color: #28a745; }
+
+.notice-header {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dps-blue);
+}
+
+/* 10-Codes Page */
+.code-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+.code-grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+.code-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.code-list li {
+    margin-bottom: 0.75rem;
+}
+
+/* Miranda Page */
+.miranda-list {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+.miranda-list li {
+    font-weight: 500;
+}
+
+/* Chain of Command Page */
+.rank-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.rank-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-bottom: 1px solid var(--light-grey);
+}
+.rank-list li:last-child {
+    border-bottom: none;
+}
+.rank-list strong {
+    font-size: 1.1rem;
+    color: var(--dps-blue);
+}
+.rank-list span {
+    font-family: 'Montserrat', sans-serif;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Penal Code Page */
+.cta-link {
+    display: inline-block;
+    background: var(--dps-blue);
+    color: var(--white);
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.cta-link:hover {
+    background-color: var(--dps-gold-accent);
+    color: var(--dps-blue);
+    transform: translateY(-2px);
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 0; /* Slimmer footer */
+    background: var(--dark-grey);
+    color: var(--light-grey);
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 900px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar .logo {
+        margin-bottom: 0.5rem;
+    }
+    .navbar .nav-links {
+        flex-wrap: wrap;
+    }
+    .navbar .nav-links li {
+        margin-left: 0;
+        margin-right: 8px;
+    }
+    .navbar .nav-links a {
+        padding: 0.25rem 0.5rem;
+    }
+    .hero {
+        margin-top: 90px; /* Adjust for taller mobile nav */
+    }
+    .content-page {
+        padding-top: 100px; /* Adjust for taller mobile nav */
+    }
+}
+
